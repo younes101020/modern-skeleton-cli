@@ -20,6 +20,7 @@
   },
   "scripts": {
     "build": "npx tsc",
+    "dx": "npx tsc && youp -s testproject",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
