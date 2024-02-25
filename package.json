@@ -1,11 +1,11 @@
 {
-  "name": "skeleton-cli",
+  "name": "modern-skeleton-cli",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
   "description": "A simple CLI tool  to bootstrap a new modern project",
-  "repository": "https://github.com/younes101020/skeleton-cli",
-  "homepage": "https://github.com/younes101020/skeleton-cli#readme",
+  "repository": "https://github.com/younes101020/modern-skeleton-cli",
+  "homepage": "https://github.com/younes101020/modern-skeleton-cli#readme",
   "author": "younes-fakallah",
   "license": "MIT",
   "dependencies": {
