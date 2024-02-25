@@ -4,7 +4,8 @@
   "type": "module",
   "main": "dist/index.js",
   "description": "A simple CLI tool  to bootstrap a new modern project",
-  "repository": "https://github.com/younes101020/typescript-cli",
+  "repository": "https://github.com/younes101020/youp-cli",
+  "homepage": "https://github.com/younes101020/youp-cli#readme",
   "author": "younes-fakallah",
   "license": "MIT",
   "dependencies": {
