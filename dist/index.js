@@ -84,10 +84,25 @@ async function validationProcess() {
                 },
             ],
         });
+<<<<<<< Updated upstream
         if (lib === "zod") {
             const spinner = createSpinner("Install dependencie").start();
             // TODO: add zod to the project and setup folder architecture
             const ok = await new Promise((resolve) => { setTimeout(resolve, 10000); });
+=======
+        const validationType = await checkbox({
+            message: "Where would you like to validate your data ?",
+            choices: [
+                { name: "client-side", value: "client-side" },
+                { name: "server-side", value: "server-side" },
+            ],
+        });
+        if (lib === "zod") {
+            const spinner = createSpinner("Install dependencie").start();
+            const ok = await new Promise((resolve) => {
+                setTimeout(resolve, 10000);
+            });
+>>>>>>> Stashed changes
             spinner.success({ text: "Dependencies installed" });
         }
     }
