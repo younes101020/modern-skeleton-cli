@@ -7,9 +7,11 @@ import select, { Separator } from "@inquirer/select";
 import { exec } from "child_process";
 import { Command } from "commander";
 import confirm from "@inquirer/confirm";
+import { checkbox } from "@inquirer/prompts";
 import { createSpinner } from "nanospinner";
 const execProm = util.promisify(exec);
 const program = new Command();
+const sleepFaker = (ms = 2000) => new Promise((resolve) => setTimeout(resolve, ms));
 console.log(figlet.textSync("Youp CLI"));
 program
     .version("1.0.0")
@@ -39,7 +41,7 @@ if (options.init) {
             {
                 name: "nuxtjs",
                 value: "nuxtjs",
-                disabled: true,
+                disabled: "(not yet available)",
             },
             {
                 name: "remix",
@@ -59,9 +61,10 @@ if (options.init) {
 }
 async function bootStrap(name) {
     const spinner = createSpinner("Install dependencies").start();
-    await execProm("yarn add next@latest react@latest react-dom@latest", {
-        cwd: `../${name}`,
-    });
+    // await execProm("yarn add next@latest react@latest react-dom@latest", {
+    //   cwd: `../${name}`,
+    // });
+    await sleepFaker();
     spinner.success({ text: "Dependencies installed" });
 }
 async function validationProcess() {
@@ -84,12 +87,6 @@ async function validationProcess() {
                 },
             ],
         });
-<<<<<<< Updated upstream
-        if (lib === "zod") {
-            const spinner = createSpinner("Install dependencie").start();
-            // TODO: add zod to the project and setup folder architecture
-            const ok = await new Promise((resolve) => { setTimeout(resolve, 10000); });
-=======
         const validationType = await checkbox({
             message: "Where would you like to validate your data ?",
             choices: [
@@ -102,7 +99,6 @@ async function validationProcess() {
             const ok = await new Promise((resolve) => {
                 setTimeout(resolve, 10000);
             });
->>>>>>> Stashed changes
             spinner.success({ text: "Dependencies installed" });
         }
     }
