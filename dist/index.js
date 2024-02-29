@@ -87,19 +87,15 @@ async function validationProcess() {
                 },
             ],
         });
-        const answer = await checkbox({
+        const validationType = await checkbox({
             message: "Where would you like to validate your data ?",
             choices: [
                 { name: "client-side", value: "client-side" },
                 { name: "server-side", value: "server-side" },
             ],
         });
-        const validation = await confirm({
-            message: "Do you need runtime validation into your app?",
-        });
         if (lib === "zod") {
             const spinner = createSpinner("Install dependencie").start();
-            // TODO: add zod to the project and setup folder architecture
             const ok = await new Promise((resolve) => {
                 setTimeout(resolve, 10000);
             });
