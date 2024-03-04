@@ -2,11 +2,16 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
+    "lib": ["es6"],
+    "types": ["reflect-metadata", "vitest/globals"],
     "strict": true,
     "target": "ES2022",
     "module": "ES2022",
     "sourceMap": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
