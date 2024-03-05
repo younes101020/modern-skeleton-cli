@@ -11,8 +11,6 @@ jobs:
     if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
-      - name: version
-        run: npm version patch
       - name: checkout
         uses: actions/checkout@v2
       - name: node
@@ -20,6 +18,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
+      - name: version
+        run: npm version patch
       - name: publish
         run: npm publish --access public
         env:
