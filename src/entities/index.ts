@@ -1,5 +1,6 @@
 export { default as FrameworkFactory } from "./frameworkfactory";
 
 // NEXTJS
-export { default as NextAuth } from "./frameworks/nextjs/auth";
-export { default as NextValidation } from "./frameworks/nextjs/validation";
+export { default as NextAuth } from "./frameworks/nextjs/auths/nextauth.auth";
+// NEXTJS => ZOD
+export { default as ZodValidation } from "./frameworks/nextjs/validations/zod.validation";

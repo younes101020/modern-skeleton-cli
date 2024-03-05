@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { IAuth, IFramework, IValidation, Side } from "../contract";
+import { IFramework } from "./frameworks/contract";
 import { injectable, inject, named } from "inversify";
 import { TYPES } from "../types";
 
